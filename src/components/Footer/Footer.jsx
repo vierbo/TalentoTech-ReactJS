@@ -4,21 +4,21 @@ export const Footer = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Integrante 1",
+      name: "Blake Zissou",
       role: "Desarrollo Frontend",
-      description: "Especialista en React y maquetación accesible.",
+      description: "Especialista en React y maquetación.",
     },
     {
       id: 2,
-      name: "Integrante 2",
+      name: "Zug Bahnhof",
       role: "Diseño UI/UX",
-      description: "Responsable de la identidad visual de Grave.",
+      description: "Responsable de la identidad visual.",
     },
     {
       id: 3,
-      name: "Integrante 3",
+      name: "Leo Fender",
       role: "Luthier & Producto",
-      description: "Curador y asesor técnico de la tienda.",
+      description: "Curador y asesor técnico.",
     },
   ];
 
@@ -64,3 +64,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

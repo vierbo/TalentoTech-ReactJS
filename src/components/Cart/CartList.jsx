@@ -10,3 +10,4 @@ export const CartList = ({ cart }) => {
     </div>
   );
 };
+

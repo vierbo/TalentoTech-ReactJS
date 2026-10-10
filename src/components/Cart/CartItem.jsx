@@ -55,3 +55,4 @@ export const CartItem = ({ item }) => {
     </article>
   );
 };
+

@@ -15,3 +15,4 @@ export const Item = ({ name, price, description, image, children }) => {
     </article>
   );
 };
+
