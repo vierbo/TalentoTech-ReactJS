@@ -24,7 +24,7 @@ Proyecto desarrollado con **ReactJS** y **Vite** para la preentrega de **Talento
 
 1. Clonar el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/vierbo/TalentoTech-ReactJS.git
    cd react_tp_boviez
    ```
 
