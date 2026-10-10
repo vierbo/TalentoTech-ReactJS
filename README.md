@@ -20,28 +20,5 @@ Proyecto desarrollado con **ReactJS** y **Vite** para la preentrega de **Talento
 - **React Router DOM 7**
 - **ImgBB API** (Hosting de imágenes de catálogo)
 
-## 📦 Instalación y Ejecución Local
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/vierbo/TalentoTech-ReactJS.git
-   cd react_tp_boviez
-   ```
-
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-
-3. Iniciar el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-
-4. Compilar para producción:
-   ```bash
-   npm run build
-   ```
-
 ---
 *Desarrollado para el curso de Frontend ReactJS - TalentoTech.*
