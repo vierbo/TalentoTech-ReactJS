@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Fender Jazz Bass",
+    "description": "El estándar de la industria. Un sonido versátil y un mástil cómodo que se adapta a cualquier estilo.",
+    "price": 1500,
+    "image": "https://i.ibb.co/DHV3VgkS/87415fd21908.png",
+    "category": "bajos"
+  },
+  {
+    "id": 2,
+    "name": "Gibson Thunderbird",
+    "description": "Un ícono del rock. Su sonido potente y su diseño audaz no pasan desapercibidos.",
+    "price": 2200,
+    "image": "https://i.ibb.co/0Vvqsy2R/3624b3c6c285.png",
+    "category": "bajos"
+  },
+  {
+    "id": 3,
+    "name": "Rickenbacker 4003",
+    "description": "El sonido clásico del rock progresivo y el post-punk. Tono brillante y sustain legendario.",
+    "price": 2500,
+    "image": "https://i.ibb.co/ynSWqsmn/2749f13a8bf4.jpg",
+    "category": "bajos"
+  },
+  {
+    "id": 4,
+    "name": "Yamaha RBX260",
+    "description": "Ideal para principiantes. Un bajo fiable, cómodo y con un sonido sólido para empezar a tocar.",
+    "price": 450,
+    "image": "https://i.ibb.co/Z6MbVB31/b38022635c7b.jpg",
+    "category": "bajos"
+  },
+  {
+    "id": 5,
+    "name": "Warwick Corvette",
+    "description": "Uno de los modelos más icónicos y versátiles, reconocido por su cuerpo ergonómico y su distintivo sonido 'growl'.",
+    "price": 4500,
+    "image": "https://i.ibb.co/2YvgD49H/3efdfef53cfb.png",
+    "category": "bajos"
+  }
+]

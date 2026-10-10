@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #BFB7DE; /* lavanda */
+  --secondary-color: #FDD827; /* amarillo */
+  --accent-color: #6F2DA8; /* violeta */
+  --text-color: #222222;
+  --light-gray: #BCB8C9;
+  --card-bg: #FFFFFF;
+  --background-color: #F4F4F9;
+  --title-font: 'Russo One', sans-serif;
+  --body-font: 'Figtree', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--title-font);
+  color: var(--accent-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--title-font);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #eabf00;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
