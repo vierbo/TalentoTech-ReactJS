@@ -1,14 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useCart } from "../../context/CartContext";
 import "./Cart.css";
 
 export const CartSummary = () => {
   const { getCartTotal, clearCart, totalQuantity } = useCart();
+  const navigate = useNavigate();
   const total = getCartTotal();
 
   const handleCheckout = () => {
-    alert("¡Muchas gracias por tu compra en Grave! 🎉");
     clearCart();
+    toast.success("¡Muchas gracias por tu compra en Grave!");
+    navigate("/");
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+    toast.info("Carrito vaciado");
   };
 
   return (
@@ -27,7 +35,7 @@ export const CartSummary = () => {
         <button className="btn-finalizar-compra" onClick={handleCheckout}>
           Finalizar compra
         </button>
-        <button className="btn-vaciar-carrito" onClick={clearCart}>
+        <button className="btn-vaciar-carrito" onClick={handleClearCart}>
           Vaciar carrito
         </button>
         <Link to="/" className="link-seguir-comprando">
@@ -37,4 +45,3 @@ export const CartSummary = () => {
     </aside>
   );
 };
-

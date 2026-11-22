@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
+import { Spinner } from "../Spinner/Spinner";
+import { getProducts } from "../../services/productsService";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = () => {
@@ -11,18 +13,12 @@ export const ItemListContainer = () => {
     setLoading(true);
     setError(null);
 
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("No se pudieron cargar los productos");
-        }
-        return res.json();
-      })
+    getProducts()
       .then((data) => {
         setProducts(data);
       })
       .catch((err) => {
-        setError(err.message);
+        setError(err.message || "No se pudieron cargar los productos");
       })
       .finally(() => {
         setLoading(false);
@@ -30,11 +26,7 @@ export const ItemListContainer = () => {
   }, []);
 
   if (loading) {
-    return (
-      <div className="status-container">
-        <p className="loading-text">Cargando productos...</p>
-      </div>
-    );
+    return <Spinner text="Cargando productos..." />;
   }
 
   if (error) {
@@ -50,7 +42,7 @@ export const ItemListContainer = () => {
       <div className="banner-intro">
         <h2 className="section-title">Tienda para bajistas</h2>
         <p className="section-subtitle">
-          Bienvenidos a Grave. Encontrá una selección curada de los mejores bajos eléctricos 
+          Bienvenidos a Grave. Encontrá una selección curada de los mejores bajos eléctricos
           y descubrí el sonido ideal para tu música.
         </p>
       </div>
@@ -59,4 +51,3 @@ export const ItemListContainer = () => {
     </section>
   );
 };
-

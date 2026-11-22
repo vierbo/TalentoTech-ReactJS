@@ -1,0 +1,85 @@
+.success-page {
+  max-width: 540px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border: 1px solid var(--light-gray);
+  border-top: 5px solid #2ecc71;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+}
+
+.success-page h2 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
+}
+
+.success-id {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.success-id code {
+  background-color: #f4f4f9;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.success-hint {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.btn-success-primary {
+  font-family: var(--title-font);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.85rem;
+  border-radius: 6px;
+}
+
+.btn-success-primary:hover {
+  background-color: #eabf00;
+}
+
+.btn-success-secondary {
+  font-family: var(--title-font);
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 0.85rem;
+  border-radius: 6px;
+}
+
+.btn-success-secondary:hover {
+  opacity: 0.92;
+}
+
+.btn-success-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 0.3rem;
+}
+
+.btn-success-link:hover {
+  text-decoration: underline;
+}

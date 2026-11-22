@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { Spinner } from "../Spinner/Spinner";
+import { getProductById } from "../../services/productsService";
 import "./ItemDetailContainer.css";
 
 export const ItemDetailContainer = () => {
@@ -14,15 +16,8 @@ export const ItemDetailContainer = () => {
     setLoading(true);
     setError(null);
 
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("No se pudo obtener la información de los productos");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        const found = data.find((prod) => String(prod.id) === String(id));
+    getProductById(id)
+      .then((found) => {
         if (found) {
           setItem(found);
         } else {
@@ -30,7 +25,7 @@ export const ItemDetailContainer = () => {
         }
       })
       .catch((err) => {
-        setError(err.message);
+        setError(err.message || "Error al obtener el producto");
       })
       .finally(() => {
         setLoading(false);
@@ -38,11 +33,7 @@ export const ItemDetailContainer = () => {
   }, [id]);
 
   if (loading) {
-    return (
-      <div className="status-container">
-        <p className="loading-text">Cargando detalle del producto...</p>
-      </div>
-    );
+    return <Spinner text="Cargando detalle del producto..." />;
   }
 
   if (error) {
@@ -66,4 +57,3 @@ export const ItemDetailContainer = () => {
     </section>
   );
 };
-

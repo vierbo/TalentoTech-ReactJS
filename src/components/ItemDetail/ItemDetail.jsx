@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useCart } from "../../context/CartContext";
 import "./ItemDetail.css";
 
@@ -10,6 +11,7 @@ export const ItemDetail = ({ item }) => {
   const handleAddToCart = () => {
     addItem(item, 1);
     setAdded(true);
+    toast.success(`"${item.name}" agregado al carrito`);
   };
 
   return (
@@ -20,9 +22,9 @@ export const ItemDetail = ({ item }) => {
       <div className="item-detail-info">
         <span className="item-category-tag">{item.category}</span>
         <h2 className="item-detail-title">{item.name}</h2>
-        <p className="item-detail-price">${item.price.toLocaleString("es-AR")}</p>
+        <p className="item-detail-price">${Number(item.price).toLocaleString("es-AR")}</p>
         <p className="item-detail-description">{item.description}</p>
-        
+
         <div className="item-detail-actions">
           <button
             className="btn-add-cart"
@@ -30,7 +32,7 @@ export const ItemDetail = ({ item }) => {
           >
             Agregar al carrito
           </button>
-          
+
           {added && (
             <p className="feedback-added">
               ¡Producto añadido al carrito!
@@ -45,4 +47,3 @@ export const ItemDetail = ({ item }) => {
     </article>
   );
 };
-
