@@ -5,7 +5,7 @@ Aplicación e-commerce SPA desarrollada con **ReactJS** y **Vite** como **Entreg
 ## 🚀 Funcionalidades Implementadas
 
 * **Catálogo y Detalle en Tiempo Real (Cloud Firestore):**
-  * Listado de instrumentos (`/`) y vista de detalle dinámico (`/product/:id`) consumidos desde Firestore mediante una capa de servicios dedicada (`src/services/productsService.js`).
+  * Listado de productos (`/`) y vista de detalle dinámico (`/product/:id`) consumidos desde Firestore mediante una capa de servicios dedicada (`src/services/productsService.js`).
 * **Carrito de Compras Global (`CartContext`):**
   * Contador en tiempo real en la barra de navegación y vista modular `/cart` (`CartView`, `CartList`, `CartItem`, `CartSummary`) para sumar, restar, eliminar productos, vaciar y finalizar compra.
 * **Panel Administrativo Protegido (`/admin`) + CRUD Completo:**
@@ -81,10 +81,10 @@ src/
    npm run build
    ```
 
-## 🔐 Acceso al Panel de Administración (Evaluación)
+## 🔐 Acceso al Panel de Administración
 
 * Ruta oculta: `/admin` (redirige automáticamente a `/admin/login` si no hay sesión activa).
 * Credenciales de prueba: `admin@admin.com` / `admin123`.
 
 ---
-*Proyecto integrador final — TalentoTech React JS (Comisión C26242).*
+*Javier Boviez — Proyecto integrador final — TalentoTech React JS (Comisión C26242).*
